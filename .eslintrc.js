@@ -1,6 +1,3 @@
-const rulesDirPlugin = require("eslint-plugin-rulesdir");
-rulesDirPlugin.RULES_DIR = "./eslint-rules";
-
 module.exports = {
   root: true,
   env: {
@@ -8,7 +5,6 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    "@react-native",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
@@ -22,19 +18,26 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
+  ignorePatterns: [".*.js", "*.config.js"],
   plugins: [
+    "eslint-plugin-react-compiler",
     "react",
     "react-hooks",
     "react-native",
     "simple-import-sort",
-    "eslint-plugin-react-compiler",
-    "rulesdir",
   ],
   rules: {
     "@typescript-eslint/no-floating-promises": "off",
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        prefer: "type-imports",
+        fixStyle: "separate-type-imports",
+      },
+    ],
     "linebreak-style": ["error", "unix"],
     "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
     "object-curly-spacing": ["error", "always"],
@@ -49,6 +52,5 @@ module.exports = {
       },
     ],
     "react-compiler/react-compiler": "error",
-    "rulesdir/no-mutate-value": "error",
   },
 };

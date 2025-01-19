@@ -1,6 +1,12 @@
-<div style="display: flex; align-items: center; gap: 10px;">
-<img src="./assets/images/app-icon.png" width="56" style="border-radius: 8px;"/><h1>Yooooooooooha</h1></div>
+<img src="./assets/images/app-icon.png" width="96" />
+
+# Yooooooooooha
+
 A Yahoo clone to use as a React Native playground.
+
+[![Lint](https://github.com/codedaddys/yooha/actions/workflows/lint.yml/badge.svg)](https://github.com/codedaddys/yooha/actions/workflows/lint.yml)
+[![TypeScript Check](https://github.com/codedaddys/yooha/actions/workflows/tsc.yml/badge.svg)](https://github.com/codedaddys/yooha/actions/workflows/tsc.yml)
+[![Test](https://github.com/codedaddys/yooha/actions/workflows/test.yml/badge.svg)](https://github.com/codedaddys/yooha/actions/workflows/test.yml)
 
 #### Tech Stack
 

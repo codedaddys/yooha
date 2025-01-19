@@ -11,6 +11,7 @@ module.exports = {
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@tanstack/query/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -25,6 +26,7 @@ module.exports = {
     "react-hooks",
     "react-native",
     "simple-import-sort",
+    "@tanstack/query",
   ],
   rules: {
     "@typescript-eslint/no-floating-promises": "off",

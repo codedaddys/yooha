@@ -1,6 +1,8 @@
 import { useNavigation } from "@react-navigation/native";
 import { useCallback } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View } from "react-native";
+import { StyledText } from "../../components/StyledText";
+import { TextButton } from "../../components/TextButton";
 
 export function SearchScreen() {
   const navigation = useNavigation();
@@ -11,14 +13,8 @@ export function SearchScreen() {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Search</Text>
-
-      <TouchableOpacity
-        onPress={onPress}
-        style={{ padding: 12, margin: 16, backgroundColor: "yellow" }}
-      >
-        <Text>Go to Search Details</Text>
-      </TouchableOpacity>
+      <StyledText variant="heading3">Search</StyledText>
+      <TextButton text="Go to Search Details" onPress={onPress} />
     </View>
   );
 }
